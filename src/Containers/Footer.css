@@ -1,0 +1,9 @@
+h3{
+  color: white;
+}
+.topFooterLink{
+  color: #f5e9e9;
+}
+.topFooterLink:hover {
+  color: #e86666;
+}

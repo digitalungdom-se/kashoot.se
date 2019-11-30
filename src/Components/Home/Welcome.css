@@ -1,0 +1,7 @@
+.slant {
+    background-color: #d92f10;
+    height: 500px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+    background-image: linear-gradient(-345deg, #dc4d33, #d92f10);
+}
