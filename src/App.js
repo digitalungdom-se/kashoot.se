@@ -1,7 +1,7 @@
 import React from 'react';
 //
-import Router from './Routes/Router'
-import { Loading } from './Components/General'
+import Router from './routes/Router'
+import { Loading } from './components/general'
 
 const App = () => {
   return (

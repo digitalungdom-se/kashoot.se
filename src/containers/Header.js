@@ -2,7 +2,7 @@ import React from "react"
 import { Col, Row, Button } from 'antd'
 import { NavLink } from "react-router-dom"
 
-import { AlignCenter, Logo } from "../Components/General"
+import { AlignCenter, Logo } from "../components/general"
 import "./Header.css"
 
 const Header = () => {

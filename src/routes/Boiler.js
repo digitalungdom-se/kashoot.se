@@ -2,10 +2,10 @@
 import React, { Suspense, lazy } from 'react'
 import { Route, Switch } from 'react-router-dom'
 // Custom components
-import { Loading } from "../Components/General"
-import { Header, Footer } from "../Containers"
+import { Loading } from "../components/general"
+import { Header, Footer } from "../containers"
 // Lazy loading
-const Home = lazy(() => import('../Containers/Home.js'))
+const Home = lazy(() => import('../containers/Home.js'))
 
 const Boiler = () => {
 	return (
