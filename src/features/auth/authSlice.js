@@ -61,6 +61,26 @@ const authSlice = createSlice({
 });
 
 export const { authStart, authSuccess, authFailure } = authSlice.actions;
+/**
+ * Authorize at kashoot
+ * @param {string} url     api route
+ * @param {string} cookie  should the function authorize with this cookie
+ * @returns {object} {
+ *  type: 'success' | 'fail',
+ *  // success
+ *  response: {
+ *    _id: string,
+ *    name: string,
+ *    username: string,
+ *    email: string,
+ *  }
+ *  // fail
+ *  errors: [{
+ *    msg: string,  // error
+ *    param: string // field
+ *  }, ...]
+ * }
+ */
 export function authorize(url = '/api/user/auth', cookie) {
   return (dispatch) => {
     dispatch(authStart());
@@ -71,6 +91,30 @@ export function authorize(url = '/api/user/auth', cookie) {
 }
 
 export const { loginStart, loginSuccess, loginFailure } = authSlice.actions;
+/**
+ * Login to kashoot
+ *
+ * @param {string}  url        which url, defaults to /api/user/login
+ * @param {string}  username   used username
+ * @param {string}  password   password
+ * @param {boolean} keepCookie should the function return the authentication cookie along
+ *                              with the response, defaults to false
+ * @returns {object} {
+ *  type: 'success' | 'fail',
+ *  // success
+ *  response: {
+ *    _id: string,
+ *    name: string,
+ *    username: string,
+ *    email: string,
+ *  }
+ *  // fail
+ *  errors: [{
+ *    msg: string,  // error
+ *    param: string // field
+ *  }, ...]
+ * }
+ */
 export function login({
   username, password, keepCookie = false, url = '/api/user/login',
 }) {
@@ -91,6 +135,17 @@ export function login({
 }
 
 export const { logoutStart, logoutSuccess, logoutFailure } = authSlice.actions;
+/**
+ * Logout of kashoot
+ * @returns {object} {
+ *  type: 'success' | 'fail',
+ *  // fail
+ *  errors: [{
+ *    msg: string,  // error
+ *    param: string // field
+ *  }, ...]
+ * }
+ */
 export function logout(url = '/api/user/logout', cookie) {
   const options = {
     method: 'delete',
