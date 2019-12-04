@@ -1,7 +1,7 @@
-import React from './node_modules/react'
-import { Col, Row, Icon } from './node_modules/antd'
+import React from 'react'
+import { Col, Row, Icon } from 'antd'
 
-import { AlignCenter } from "../components/General"
+import { AlignCenter } from "../Components/General"
 import "./Footer.css"
 
 const Footer = () => {

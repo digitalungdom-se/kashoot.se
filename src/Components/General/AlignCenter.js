@@ -1,5 +1,5 @@
-import React from "./node_modules/react"
-import { Row, Col } from "./node_modules/antd"
+import React from "react"
+import { Row, Col } from "antd"
 
 const AlignCenter = ({ style, children, ...props }) => (
 	<Row

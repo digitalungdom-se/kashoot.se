@@ -1,6 +1,6 @@
-import React from "./node_modules/react"
+import React from "react"
 
-import { Welcome } from "../components/Home"
+import { Welcome } from "../Components/Home"
 
 const Home = () => {
   return(

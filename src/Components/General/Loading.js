@@ -1,5 +1,5 @@
-import React from './node_modules/react'
-import { Spin, Icon } from './node_modules/antd'
+import React from 'react'
+import { Spin, Icon } from 'antd'
 
 import Logo from './Logo'
 import AlignCenter from './AlignCenter'

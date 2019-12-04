@@ -1,8 +1,8 @@
-import React from "./node_modules/react"
-import { Col, Row, Button } from './node_modules/antd'
-import { NavLink } from "./node_modules/react-router-dom"
+import React from "react"
+import { Col, Row, Button } from 'antd'
+import { NavLink } from "react-router-dom"
 
-import { AlignCenter, Logo } from "../components/General"
+import { AlignCenter, Logo } from "../Components/General"
 import "./Header.css"
 
 const Header = () => {
