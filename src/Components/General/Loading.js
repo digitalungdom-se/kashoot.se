@@ -6,11 +6,11 @@ import AlignCenter from './AlignCenter'
 
 function Loading({ logo, spin }) {
 	return (
-		<AlignCenter>
+		<AlignCenter style={{marginTop: "20vh", color: "#d92f10"}}>
 			<div style={{margin: "auto"}}>
 				{
 					logo &&
-          <Logo/>
+          <Logo style={{fontSize: 40}}/>
 				}
 				{
 					spin &&

@@ -1,7 +1,12 @@
 import React from "react"
 import { Row, Col } from "antd"
 
-const AlignCenter = ({ style, children, ...props }) => (
+const AlignCenter = ({
+	style,
+	children,
+	centerHorizontal = true,
+	...props }) =>(
+
 	<Row
 		type="flex"
 		justify="center"
@@ -10,6 +15,9 @@ const AlignCenter = ({ style, children, ...props }) => (
 		<Col
 			type="flex"
 			justify="center"
+			style={{
+				textAlign: "center",
+			}}
 			xs={{ span: 22 }}
 			sm={{ span: 22 }}
 			md={{ span: 20 }}
@@ -17,7 +25,12 @@ const AlignCenter = ({ style, children, ...props }) => (
 			xl={{ span: 16 }}
 			{...props}
 		>
-			{children}
+			<Row
+			type={centerHorizontal? "flex" : null}
+			justify={centerHorizontal? "center" : null}
+			>
+				{children}
+			</Row>
 		</Col>
 	</Row>
 )

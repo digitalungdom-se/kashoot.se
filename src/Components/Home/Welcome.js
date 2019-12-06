@@ -1,26 +1,72 @@
 import React from "react"
-import { Row, Col } from "antd"
+import { Row, Col, Button } from "antd"
 
-import "./Welcome.css"
+import {
+  TransparentDiv,
+  SlantedDiv,
+  StyledTitle,
+  graphicProfile
+} from "../../Styling"
+import { VerticalLine } from "../General"
+import { CodeInput } from "../Forms"
 
 const Home = () => {
   return(
-    <div className="container">
-      <div className="slant">
-        <Row type="flex" justify="end">
-          <Col span={8}>
-            <div style={{flex: 1, background: "rgba(255,255,255,0.2)", borderRadius: 10, color: "white", marginTop: "20%", marginRight: "20%", padding: "6% 10%", textAlign: 'center'}}>
-              <h1 style={{color: "white", fontSize: 26, marginBottom: 4}}>
-                Joining a game?
-              </h1>
-              <p>
-                Enter your six-digit code provided by your game host below.
+    <SlantedDiv>
+      <Row
+        type="flex"
+        justify="center"
+        style={{paddingTop: 50}}
+      >
+        <Col
+          xs={24}
+          sm={14}
+          md={11}
+          lg={9}
+          xl={7}
+        >
+          <TransparentDiv>
+            <StyledTitle style={{marginBottom: 10}}>
+              Joining a game?
+            </StyledTitle>
+            <CodeInput
+              to="/player-page"
+              description={
+                <p style={{color: graphicProfile.colors.white}}>
+                  {"Enter your six-digit code provided " +
+                  "by your game's host below."}
+                </p>
+              }
+            />
+
+            <VerticalLine/>
+
+            <StyledTitle style={{marginBottom: 10}}>
+              Own or want to host a game?
+            </StyledTitle>
+            <Row
+              type="flex"
+              justify="center"
+              gutter={10}
+              style={{marginBottom: 20}}
+            >
+              <Button style={{width: "45%"}}>
+                Host a game
+              </Button>
+              <p style={{margin: "5px 2%"}}>
+                or
               </p>
-            </div>
-          </Col>
-        </Row>
-      </div>
-    </div>
+              <Button
+                href="https://digitalungdom.se/logga-in"
+                style={{width: "45%"}}
+              >
+                Sign in
+              </Button>
+            </Row>
+          </TransparentDiv>
+        </Col>
+      </Row>
+    </SlantedDiv>
   )
 }
 

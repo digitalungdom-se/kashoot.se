@@ -1,3 +1,5 @@
-export { default as Home } from './Home.js'
 export { default as Header } from './Header.js'
+export { default as Home } from './Home.js'
+export { default as Join } from './Join.js'
+export { default as PlayerPage } from './PlayerPage.js'
 export { default as Footer } from './Footer.js'
