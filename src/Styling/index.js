@@ -1,6 +1,7 @@
 export { default as Theme } from "./Theme"
 export { default as graphicProfile } from "./GraphicProfile"
 export { default as TransparentDiv } from "./TransparentDiv"
+export { default as TransparentDivBorder} from "./TransparentDivBorder"
 export { default as SlantedDiv } from "./SlantedDiv"
 export { default as StyledTitle } from "./StyledTitle"
 export { default as StyledRedDiv } from "./StyledRedDiv"

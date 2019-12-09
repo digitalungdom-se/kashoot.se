@@ -32,29 +32,24 @@ const Header = () => {
             >
               <Col>
                 <NavLink to="/how-to-play">
-                  How to play
+                  Hur spelar man?
                 </NavLink>
               </Col>
               <Col>
-                <NavLink to="/host-game">
-                  Host a game
+                <NavLink to="/signup">
+                  Bli arrangör
                 </NavLink>
               </Col>
               <Col>
-                <NavLink to="/about">
-                  About us
-                </NavLink>
-              </Col>
-              <Col>
-                <NavLink to="/sign-in">
-                  Sign in
+                <NavLink to="/login">
+                  Logga in
                 </NavLink>
               </Col>
               <Col>
                 <NavLink to="/join">
                   <Button>
                     <p style={{fontWeight: "bold", marginTop: 4}}>
-                      Join a game
+                      Delta i ett spel
                     </p>
                   </Button>
                 </NavLink>

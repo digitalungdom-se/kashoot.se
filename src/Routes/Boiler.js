@@ -10,6 +10,8 @@ import { StyledBrightDiv } from "../Styling"
 // Lazy loading
 const Home = lazy(() => import("../Containers/Home.js"))
 const Join = lazy(() => import("../Containers/Join.js"))
+const Login = lazy(() => import("../Containers/Login.js"))
+const SignUp = lazy(() => import("../Containers/SignUp.js"))
 const PlayerPage = lazy(() => import("../Containers/PlayerPage.js"))
 
 const Boiler = () => {
@@ -39,6 +41,16 @@ const Boiler = () => {
 							path="/join"
 							exact
 							render={props => <Join {...props}/>}
+						/>
+						<Route
+							path="/login"
+							exact
+							render={props => <Login {...props}/>}
+						/>
+						<Route
+							path="/signup"
+							exact
+							render={props => <SignUp {...props}/>}
 						/>
 						<Route
 							path="/player-page"

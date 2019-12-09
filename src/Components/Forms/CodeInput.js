@@ -1,6 +1,8 @@
 import React from "react"
 import { Form, Input } from "antd"
 import { withRouter } from "react-router-dom"
+// Custom components
+import { graphicProfile } from "../../Styling"
 
 const codeLength = 6
 
@@ -24,7 +26,7 @@ class CodeInput extends React.Component {
 
     return(
       <Form>
-        <p>
+        <p style={{ color: graphicProfile.colors.grey}}>
           { this.props.description }
         </p>
         <Form.Item>

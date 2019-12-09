@@ -1,6 +1,7 @@
 import React from "react"
 import { Row, Col, Button } from "antd"
-
+import { NavLink } from "react-router-dom"
+// Custom components
 import {
   TransparentDiv,
   SlantedDiv,
@@ -27,14 +28,14 @@ const Home = () => {
         >
           <TransparentDiv>
             <StyledTitle style={{marginBottom: 10}}>
-              Joining a game?
+              Deltagare i ett spel?
             </StyledTitle>
             <CodeInput
               to="/player-page"
               description={
                 <p style={{color: graphicProfile.colors.white}}>
-                  {"Enter your six-digit code provided " +
-                  "by your game's host below."}
+                  {"Ange din sexsiffriga kod som du " +
+                  "fått av ditt spels arrangör."}
                 </p>
               }
             />
@@ -42,26 +43,33 @@ const Home = () => {
             <VerticalLine/>
 
             <StyledTitle style={{marginBottom: 10}}>
-              Own or want to host a game?
+              Vill du arrangera ett spel?
             </StyledTitle>
+            <p style={{color: graphicProfile.colors.white}}>
+              Gör det nu gratis genom att skapa ett admin-konto
+              eller logga in.
+            </p>
             <Row
               type="flex"
-              justify="center"
-              gutter={10}
+              justify="space-between"
               style={{marginBottom: 20}}
             >
-              <Button style={{width: "45%"}}>
-                Host a game
+            <NavLink
+              to="/signup"
+              style={{width: "48.5%"}}
+            >
+              <Button style={{width: "100%"}}>
+                Bli arrangör
               </Button>
-              <p style={{margin: "5px 2%"}}>
-                or
-              </p>
-              <Button
-                href="https://digitalungdom.se/logga-in"
-                style={{width: "45%"}}
+            </NavLink>
+              <NavLink
+                to="/login"
+                style={{width: "48.5%"}}
               >
-                Sign in
-              </Button>
+                <Button style={{width: "100%"}}>
+                  Logga in
+                </Button>
+              </NavLink>
             </Row>
           </TransparentDiv>
         </Col>

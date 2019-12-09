@@ -1,17 +1,13 @@
 import React from "react"
-import { Row, Col, Button } from "antd"
+import { Row, Col } from "antd"
 // Custom components
 import {
   Emoji,
-  AlignCenter,
-  VerticalLine
+  VerticalLine,
+  BrightContainer
 } from "../Components/General"
-import {
-  TransparentDiv,
-  StyledTitle,
-  graphicProfile
-} from "../Styling"
-import { ConfirmCode } from "../Components/Gameplay"
+import { StyledTitle, graphicProfile } from "../Styling"
+import { CodeInput } from "../Components/Forms"
 
 const PlayerPage = () => {
 
@@ -19,79 +15,49 @@ const PlayerPage = () => {
   const targetName = "Kelvin John"
 
   return(
-    <AlignCenter>
-      <Col
-        xs={22}
-        sm={16}
-        md={13}
-        lg={11}
-        xl={8}
+    <BrightContainer>
+      <StyledTitle
+        style={{
+          color: graphicProfile.colors.mainRed,
+          marginBottom: 4,
+          fontSize: 22,
+        }}
       >
-        <TransparentDiv
-          style={{
-            color: graphicProfile.colors.black,
-            border: "1px solid",
-            borderColor: graphicProfile.colors.lightGrey,
-            marginTop: 50,
-            paddingBottom: 20
-          }}
-        >
-          <StyledTitle
-            style={{
-              color: graphicProfile.colors.mainRed,
-              marginBottom: 4,
-              fontSize: 22,
-            }}
-          >
-            <Emoji emoji="🐺"/>Välkommen tillbaka<Emoji emoji="🦈"/>
-          </StyledTitle>
-          <p
-            style={{
-              marginTop: -4,
-              color: graphicProfile.colors.grey
-            }}
-          >
-            Du ska fånga...
-          </p>
-          <StyledTitle
-            style={{
-              fontSize: 38,
-              color: "black",
-              marginTop: -6
-            }}
-          >
-            {targetName}
-          </StyledTitle>
+        <Emoji emoji="🐺"/>
+          Välkommen tillbaka
+        <Emoji emoji="🦈"/>
+      </StyledTitle>
+      <p style={{marginTop: -4}}>
+        Du ska fånga...
+      </p>
+      <StyledTitle
+        style={{
+          fontSize: 38,
+          color: "black",
+          marginTop: -6
+        }}
+      >
+        {targetName}
+      </StyledTitle>
 
-          <VerticalLine dark={true}/>
+      <VerticalLine dark={true}/>
 
-          <p
-            style={{
-              marginTop: 10,
-              color: graphicProfile.colors.grey
-            }}
-          >
-            Har du lyckas fånga någon eller själv blivit fångad?
-            Tryck en av det nedanstående knapparna.
-          </p>
-          <Row
-            type="flex"
-            justify="space-between"
-            style={{marginTop: 20}}
-          >
-            <ConfirmCode
-              buttonDescription={"Jag har fångat"}
-              inputDescription={"Ange koden av personen du fångat"}
-              />
-            <ConfirmCode
-            buttonDescription={"Jag blev fångad"}
-            inputDescription={"Ange koden av personen som fångade dig"}
-            />
-          </Row>
+      <StyledTitle
+        style={{
+          color: graphicProfile.colors.mainRed,
+          marginBottom: 4,
+          fontSize: 22,
+        }}
+      >
+        {"Fångat " + targetName + "?"}
+      </StyledTitle>
 
-        </TransparentDiv>
-      </Col>
-    </AlignCenter>
+      <CodeInput
+        description={
+          "Ange " + targetName + "s kod i fältet nedanför."
+        }
+      />
+    </BrightContainer>
   )
 }
 
