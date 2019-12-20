@@ -27,7 +27,6 @@ const Join = () => {
           "fått av ditt spels arrangör."
         }
       />
-
       <div
         style={{
           textAlign: "left",
