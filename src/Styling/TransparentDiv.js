@@ -6,6 +6,7 @@ const TransparentDiv = styled.div`
   color: ${props => props.theme.colors.white};
   border-radius: 10px;
   padding: 10px 30px;
+  margin: 0 6px;
   text-align: center;
 `
 export default TransparentDiv

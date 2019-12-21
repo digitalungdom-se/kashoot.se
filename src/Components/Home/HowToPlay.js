@@ -22,11 +22,11 @@ const Home = () => {
             width: "100%"
           }}
         >
-          Vad är Kashoot?
+          Vad är Killer.Games?
         </StyledTitle>
         <div>
           <p style={{fontSize: 16, width: "60%", margin: "auto"}}>
-            Kashoot är en gratis tjänst för dig som vill
+            Killer.Games är en gratis tjänst för dig som vill
             spela det klassiska spelet "killer game" - att skapa
             och spela ett spel är otroligt enkelt:
           </p>

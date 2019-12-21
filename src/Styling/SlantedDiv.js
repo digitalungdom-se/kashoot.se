@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const SlantedDiv = styled.div`
   background-color: ${props => props.theme.colors.mainRed};
-  height: 500px;
+  height: 540px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
   background-image: linear-gradient(

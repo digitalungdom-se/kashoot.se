@@ -11,7 +11,7 @@ import {
 import { VerticalLine } from "../General"
 import { CodeInput } from "../Forms"
 
-const frontPage = require("./killergamesFrontpage.png")
+const frontPage = require("../../Resources/killergamesFrontpage.png")
 
 const Home = () => {
   return(
@@ -19,16 +19,25 @@ const Home = () => {
       <Row
         type="flex"
         justify="center"
-        style={{paddingTop: 50}}
+        align="middle"
+        style={{height: "100%", marginTop: -40, marginBottom: 40}}
       >
-
-        <Col span={12}>
+        <Col
+          xs={0}
+          sm={0}
+          md={12}
+          lg={12}
+          xl={11}
+        >
           <div>
             <img
               src={frontPage}
               alt="frontPage"
-              style={{width: "100%"}}
-              />
+              style={{
+                width: "100%",
+                maxWidth: 650,
+              }}
+            />
           </div>
         </Col>
 
@@ -74,17 +83,17 @@ const Home = () => {
                   Bli arrangör
                 </Button>
               </NavLink>
-                <NavLink
-                  to="/login"
-                  style={{width: "48.5%"}}
-                >
-                  <Button style={{width: "100%"}}>
-                    Logga in
-                  </Button>
-                </NavLink>
-              </Row>
-            </TransparentDiv>
-          </Col>
+              <NavLink
+                to="/login"
+                style={{width: "48.5%"}}
+              >
+                <Button style={{width: "100%"}}>
+                  Logga in
+                </Button>
+              </NavLink>
+            </Row>
+          </TransparentDiv>
+        </Col>
       </Row>
     </SlantedDiv>
   )

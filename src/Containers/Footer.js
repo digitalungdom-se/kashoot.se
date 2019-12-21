@@ -29,8 +29,8 @@ const Footer = () => {
               Om oss
             </StyledTitle>
             <p style={{marginBottom: 6}}>
-              Kashoot är en digitaliserad version av det älskade
-              sällskapsspelet "killer games", gjort av Digital Ungdom.
+              Killer.Games är en tjänst gjord av Digital Ungdom för
+              dig som vill spela det älskade spelet "killer games".
               Tjänsten är <b>helt gratis</b> och open source -
               allt som behövs för att skapa ett spel är ett konto.
             </p>
@@ -85,7 +85,7 @@ const Footer = () => {
         >
          <Col>
            <p style={{marginBottom: 6}}>
-            Kashoot 2019
+            Killer.Games 2019
            </p>
          </Col>
        </Row>

@@ -9,7 +9,9 @@ const Logo = ({ style }) => {
 			margin: 0,
 			...style
 		}}>
-			Kashoot
+			Killer
+			<span style={{color: "#5e0501"}}>•</span>
+			Games
 		</h1>
 	)
 }
