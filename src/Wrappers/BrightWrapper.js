@@ -1,10 +1,10 @@
 import React from "react"
 import { Col } from "antd"
 // Custom components
-import { TransparentDivBorder } from "../../Styling"
-import { AlignCenter } from "./"
+import { TransparentDivBorder } from "../Styling"
+import { AlignCenter } from "../Components/General"
 
-const BrightContainer = ({ children }) => {
+const BrightWrapper = ({ children }) => {
 	return (
 		<AlignCenter style={{marginTop: "10vh"}}>
 	    <Col
@@ -22,4 +22,4 @@ const BrightContainer = ({ children }) => {
 	)
 }
 
-export default BrightContainer
+export default BrightWrapper

@@ -2,11 +2,11 @@ import React from 'react'
 import { Col, Row, Icon } from 'antd'
 
 import { AlignCenter, VerticalLine } from "../Components/General"
-import { StyledTitle, StyledRedDiv } from "../Styling"
+import { StyledTitle, StyledDiv, StyledText } from "../Styling"
 
 const Footer = () => {
   return (
-    <StyledRedDiv style={{paddingBottom: 10}}>
+    <StyledDiv style={{paddingBottom: 10}}>
       <AlignCenter
         style={{
         }}
@@ -28,12 +28,12 @@ const Footer = () => {
             <StyledTitle style={{fontSize: 18}}>
               Om oss
             </StyledTitle>
-            <p style={{marginBottom: 6}}>
+            <StyledText style={{marginBottom: 6}}>
               Killer.Games är en tjänst gjord av Digital Ungdom för
               dig som vill spela det älskade spelet "killer games".
               Tjänsten är <b>helt gratis</b> och open source -
               allt som behövs för att skapa ett spel är ett konto.
-            </p>
+            </StyledText>
           </Col>
           <Col
             md={{ span: 8 }}
@@ -42,17 +42,16 @@ const Footer = () => {
             <StyledTitle style={{fontSize: 18}}>
               Kontakt
             </StyledTitle>
-            <p style={{marginBottom: 6}}>
+            <StyledText style={{marginBottom: 6}}>
               <a
               target="_blank"
               rel="noopener noreferrer"
               href="mailto:styrelse@digitalungdom.se"
-              className="topFooterLink"
               >
                 <Icon type="mail" style={{marginRight: 6}}/>
                 styrelse@digitalungdom.se
               </a>
-            </p>
+            </StyledText>
           </Col>
           <Col
             md={{ span: 8 }}
@@ -61,17 +60,16 @@ const Footer = () => {
             <StyledTitle style={{fontSize: 18}}>
               Utveckla
             </StyledTitle>
-            <p style={{marginBottom: 6}}>
+            <StyledText style={{marginBottom: 6}}>
               <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/digitalungdom-se/kashoot.se"
-              className="topFooterLink"
               >
                 <Icon type="github" style={{marginRight: 6}}/>
                 GitHub
               </a>
-            </p>
+            </StyledText>
           </Col>
         </Row>
         <VerticalLine/>
@@ -84,13 +82,13 @@ const Footer = () => {
           }}
         >
          <Col>
-           <p style={{marginBottom: 6}}>
+           <StyledText style={{marginBottom: 6}}>
             Killer.Games 2019
-           </p>
+           </StyledText>
          </Col>
        </Row>
      </AlignCenter>
-   </StyledRedDiv>
+   </StyledDiv>
   )
 }
 

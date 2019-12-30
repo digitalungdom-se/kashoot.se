@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const StyledTitle = styled.h1`
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.title};
   font-family: Bebas Neue;
   font-size: 26px;
   margin: 16px 0;

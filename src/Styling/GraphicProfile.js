@@ -5,7 +5,7 @@ const graphicProfile = {
     orange: "#dc4d33",
 
     black: "#1a1818",
-    grey: "#828282",
+    grey: "#8c8c8c",
     lightGrey: "#c4c4c4",
     white: "#f5e9e9",
   },

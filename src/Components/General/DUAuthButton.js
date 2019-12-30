@@ -1,5 +1,5 @@
 import React from "react"
-import { Col, Row, Button } from "antd"
+import { Button } from "antd"
 
 const logo = require('../../Resources/DU_Logo.png');
 
@@ -22,6 +22,7 @@ const DUAuthButton = ({ href, text }) => {
     }}>
       <img
         src={logo}
+        alt="DU_Logo"
         style={{
           width: 25,
           borderRadius: 2,

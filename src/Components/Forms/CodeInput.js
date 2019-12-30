@@ -2,7 +2,7 @@ import React from "react"
 import { Form, Input } from "antd"
 import { withRouter } from "react-router-dom"
 // Custom components
-import { graphicProfile } from "../../Styling"
+import { StyledText } from "../../Styling"
 
 const codeLength = 6
 
@@ -26,9 +26,9 @@ class CodeInput extends React.Component {
 
     return(
       <Form>
-        <p style={{ color: graphicProfile.colors.grey}}>
+        <StyledText>
           { this.props.description }
-        </p>
+        </StyledText>
         <Form.Item>
           {getFieldDecorator('code', {
             rules: [{validator: this.validateCode}]

@@ -2,15 +2,13 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import { Row } from "antd"
 // Custom components
-import {
-  BrightContainer,
-  DUAuthButton
-} from "../Components/General"
-import { StyledTitle, graphicProfile } from "../Styling"
+import { DUAuthButton } from "../Components/General"
+import { BrightWrapper } from "../Wrappers"
+import { StyledTitle, StyledText, graphicProfile } from "../Styling"
 
 const SignUp = () => {
   return(
-    <BrightContainer>
+    <BrightWrapper>
       <StyledTitle
         style={{
           color: graphicProfile.colors.mainRed,
@@ -19,11 +17,11 @@ const SignUp = () => {
       >
         Bli arrangör
       </StyledTitle>
-      <p>
+      <StyledText>
         Skapa ett konto hos Digital Ungdom - vår ideala
         ungdomsorganisation - för att bli spelledare för
         obegränsat antal spel, helt gratis.
-      </p>
+      </StyledText>
 
       <DUAuthButton
         href="https://digitalungdom.se/kashoot/bli-medlem"
@@ -49,7 +47,7 @@ const SignUp = () => {
             </p>
           </NavLink>
         </Row>
-    </BrightContainer>
+    </BrightWrapper>
   )
 }
 

@@ -5,37 +5,46 @@ import { Layout } from "antd"
 // Custom components
 import { Loading } from "../Components/General"
 import { Header, Footer } from "../Containers"
-import { StyledBrightDiv } from "../Styling"
+import { StyledDiv, Theme } from "../Styling"
+import { redTheme } from "../Styling/Themes"
 
 // Lazy loading
 const Home = lazy(() => import("../Containers/Home.js"))
 const Join = lazy(() => import("../Containers/Join.js"))
 const Login = lazy(() => import("../Containers/Login.js"))
 const SignUp = lazy(() => import("../Containers/SignUp.js"))
+const HowToPlay = lazy(() => import("../Containers/HowToPlay.js"))
 const PlayerPage = lazy(() => import("../Containers/PlayerPage.js"))
 
 const Boiler = () => {
 	return (
 		<Layout>
-			<Layout.Header
-				style={{
-					position: 'fixed',
-					zIndex: 2,
-					height: 0,
-					width: '100%',
-					padding: 0,
-					lineHeight: 0
-				}}
-			>
-				<Header/>
-			</Layout.Header>
-			<StyledBrightDiv style={{ paddingTop: 56, minHeight: "80vh" }}>
+			<Theme theme={redTheme}>
+				<Layout.Header
+					style={{
+						position: 'fixed',
+						zIndex: 2,
+						height: 0,
+						width: '100%',
+						padding: 0,
+						lineHeight: 0
+					}}
+				>
+					<Header/>
+				</Layout.Header>
+			</Theme>
+			<StyledDiv style={{ paddingTop: 56, minHeight: "80vh" }}>
 				<Suspense fallback={<Loading logo />}>
 					<Switch>
 						<Route
 							path="/"
 	            exact
 							render={props => <Home {...props}/>}
+						/>
+						<Route
+							path="/how-to-play"
+							exact
+							render={props => <HowToPlay {...props}/>}
 						/>
 						<Route
 							path="/join"
@@ -59,8 +68,10 @@ const Boiler = () => {
 						/>
 					</Switch>
 				</Suspense>
-			</StyledBrightDiv>
-			<Footer/>
+			</StyledDiv>
+			<Theme theme={redTheme}>
+				<Footer/>
+			</Theme>
 		</Layout>
 	)
 }

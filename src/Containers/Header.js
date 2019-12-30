@@ -3,11 +3,11 @@ import { Col, Row, Button } from 'antd'
 import { NavLink } from "react-router-dom"
 // Custom components
 import { AlignCenter, Logo } from "../Components/General"
-import { StyledRedDiv } from "../Styling"
+import { StyledDiv } from "../Styling"
 
 const Header = () => {
   return(
-    <StyledRedDiv style={{padding: "12px 0"}}>
+    <StyledDiv style={{padding: "12px 0"}}>
       <AlignCenter centerHorizontal={false}>
         <Row
           type="flex"
@@ -58,7 +58,7 @@ const Header = () => {
           </Col>
         </Row>
       </AlignCenter>
-    </StyledRedDiv>
+    </StyledDiv>
   )
 }
 
