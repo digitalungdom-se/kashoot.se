@@ -13,6 +13,7 @@ const Home = lazy(() => import("../Containers/Home.js"))
 const Join = lazy(() => import("../Containers/Join.js"))
 const Login = lazy(() => import("../Containers/Login.js"))
 const SignUp = lazy(() => import("../Containers/SignUp.js"))
+const AdminPage = lazy(() => import("../Containers/AdminPage.js"))
 const HowToPlay = lazy(() => import("../Containers/HowToPlay.js"))
 const PlayerPage = lazy(() => import("../Containers/PlayerPage.js"))
 
@@ -65,6 +66,11 @@ const Boiler = () => {
 							path="/player-page"
 							exact
 							render={props => <PlayerPage {...props}/>}
+						/>
+						<Route
+							path="/admin-page"
+							exact
+							render={props => <AdminPage {...props}/>}
 						/>
 					</Switch>
 				</Suspense>
