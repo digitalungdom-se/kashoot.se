@@ -29,7 +29,7 @@ const Footer = () => {
               Om oss
             </StyledTitle>
             <StyledText style={{marginBottom: 6}}>
-              Killer.Games är en tjänst gjord av Digital Ungdom för
+              Killer.games är en tjänst gjord av Digital Ungdom för
               dig som vill spela det älskade spelet "killer games".
               Tjänsten är <b>helt gratis</b> och open source -
               allt som behövs för att skapa ett spel är ett konto.
@@ -83,7 +83,7 @@ const Footer = () => {
         >
          <Col>
            <StyledText style={{marginBottom: 6}}>
-            Killer.Games 2019
+            Killer.games 2019
            </StyledText>
          </Col>
        </Row>

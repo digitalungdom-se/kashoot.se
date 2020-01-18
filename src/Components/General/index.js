@@ -1,5 +1,6 @@
 export { default as Logo } from './Logo.js'
 export { default as Emoji } from './Emoji.js'
+export { default as Modal } from './Modal.js'
 export { default as Loading } from './Loading.js'
 export { default as AlignCenter } from './AlignCenter.js'
 export { default as VerticalLine } from './VerticalLine.js'

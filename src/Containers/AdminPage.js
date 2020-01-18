@@ -10,7 +10,13 @@ import { lightTheme } from "../Styling/Themes"
 const AdminPage = () => {
   return(
     <Theme theme={lightTheme}>
-      <AlignCenter>
+      <AlignCenter
+        xs={{ span: 24 }}
+        sm={{ span: 23 }}
+        md={{ span: 22 }}
+        lg={{ span: 22 }}
+        xl={{ span: 20 }}
+      >
         <GamesTable/>
       </AlignCenter>
     </Theme>

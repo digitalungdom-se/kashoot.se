@@ -15,8 +15,8 @@ const Login = () => {
           Välkommen tillbaka
         </StyledTitle>
         <p>
-          Logga in med ditt Digital Ungdom konto för att
-          enkelt skapa ett spel, se statistik och mycket mer.
+          Som arrangör, logga in  här med ditt Digital Ungdom konto för att
+          skapa ett spel, se statistik och mycket mer.
         </p>
         <DUAuthButton
           href="https://digitalungdom.se/kashoot/logga-in"

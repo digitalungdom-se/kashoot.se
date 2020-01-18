@@ -34,6 +34,7 @@ module.exports = override(
       "@border-color-split": theme.colors.lightGrey,
       "@table-header-color": "black",
       "@table-header-bg": "rgba(0,0,0,0)",
+      "@table-expanded-row-bg": "rgba(0,0,0,0)",
 
       "@badge-dot-size": 10,
 
@@ -41,7 +42,7 @@ module.exports = override(
 			"@link-hover-color": theme.colors.lightRed,
 
 			"@btn-default-color": theme.colors.red,
-      "@border-color-base": theme.colors.red,
+      "@border-color-base": theme.colors.lightRed,
 
 			"@input-color": theme.colors.red,
 		 },

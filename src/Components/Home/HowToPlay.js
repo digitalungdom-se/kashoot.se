@@ -1,7 +1,12 @@
 import React from "react"
 import { Col, Row } from "antd"
 // Custom components
-import { StyledDiv, StyledTitle, graphicProfile } from "../../Styling"
+import {
+  StyledDiv,
+  StyledTitle,
+  StyledATag,
+  graphicProfile
+} from "../../Styling"
 import { AlignCenter } from "../General"
 
 const step = (title, text, offset=0) => (
@@ -10,11 +15,11 @@ const step = (title, text, offset=0) => (
       offset={offset}
       span={12}
       style={{
-        marginBottom: -60,
-        textAlign: "center"
+        textAlign: "center",
+        marginBottom: -20
       }}
     >
-      <StyledTitle>
+      <StyledTitle style={{marginBottom: 0}}>
         {title}
       </StyledTitle>
       <p
@@ -32,7 +37,13 @@ const step = (title, text, offset=0) => (
 const Home = () => {
   return(
     <StyledDiv style={{marginTop: 40, paddingBottom: 100}}>
-      <AlignCenter>
+      <AlignCenter
+        xs={{ span: 22 }}
+  			sm={{ span: 22 }}
+  			md={{ span: 16 }}
+  			lg={{ span: 14 }}
+  			xl={{ span: 12 }}
+      >
         <StyledTitle style={{width: "100%"}}>
           Vad är Killer.Games?
         </StyledTitle>
@@ -43,7 +54,7 @@ const Home = () => {
             color: graphicProfile.colors.black,
             margin: "auto"
           }}>
-            <b>Killer.Games</b> är en gratis tjänst, gjort av
+            <b>Killer.Games</b> är en gratis tjänst, gjord av
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,7 +68,8 @@ const Home = () => {
             och spela ett spel är otroligt enkelt:
           </p>
         </div>
-        <Row style={{marginTop: 20, width: "100%"}}>
+
+        <Row style={{marginTop: 50, width: "100%"}}>
           {
             step(
               <>
@@ -70,6 +82,8 @@ const Home = () => {
                 Du som vill arrangera ett spel börjar med att skapa
                 ett gratiskonto. När du är inloggad kan du enkelt
                 anordna ett spel med egna regler.
+                <StyledATag href="/admin-guide"> Läs mer här.
+                </StyledATag>
               </p>
             )
           }
@@ -86,6 +100,8 @@ const Home = () => {
                 anmäla sig. När någon anmält sig kan angagören enkelt
                 generera en unik kod till dem som kommer användas i
                 spelet.
+                <StyledATag href="/admin-guide"> Läs mer här.
+                </StyledATag>
               </p>,
               12
             )
@@ -99,7 +115,7 @@ const Home = () => {
                 Starta spelet!
               </>,
               <p>
-                När alla har anmält sig kan angagören starta spelet.
+                När alla har anmält sig kan arrangören starta spelet.
                 Nu ska alla deltagare hitta och eliminera sin sitt
                 offer, men samtidigt akta sig för personer som är
                 ute efter dem själva...
