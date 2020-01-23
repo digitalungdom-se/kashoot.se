@@ -1,5 +1,7 @@
 import React, { createRef } from 'react'
 import { Modal, Col, Row, Button, Input } from 'antd'
+// Custom components
+import { StyledTitle, StyledText } from "../../Styling"
 
 function KashootModal({
   visible = false,
@@ -10,6 +12,7 @@ function KashootModal({
   cancelText = "Avbryt",
   confirmText = "Bekräfta",
   showInput = false,
+  maxWidth,
   handleInput = () => {},
   onCancel = () => {},
   onConfirm = () => {},
@@ -20,76 +23,84 @@ function KashootModal({
   const inputRef = createRef()
 
   return (
-     <Modal
-       visible={visible}
-       onCancel={onCancel}
-       footer={null}
-       style={{textAlign: "center", maxWidth: 300}}
-     >
-       <h1 style={{fontSize: 18, fontWeight: 'bold', marginTop: -8}}>{title}</h1>
-
-       <p>{description}</p>
-       {
-        showInput &&
-        <Input
-          ref={inputRef}
+      <Modal
+        visible={visible}
+        onCancel={onCancel}
+        footer={null}
+        style={{textAlign: "center", maxWidth:maxWidth?maxWidth:null}}
+      >
+        <StyledTitle
           style={{
-            marginBottom: 24
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginTop: -9,
+            marginBottom: 0
           }}
-        />
-       }
+        >
+          {title}
+        </StyledTitle>
 
-       {children}
+     <StyledText>{description}</StyledText>
+     {
+      showInput &&
+      <Input
+        ref={inputRef}
+        style={{ marginBottom: description ? 24 : 0  }}
+      />
+     }
+     {children}
+     {
+       modalType === "confirmOnly"?
+       (
+         <Row type="flex" justify="end">
+           <Col>
+             <Button
+               style={{width: "100%"}}
+               onClick={() => {
+                onConfirm()
+              }}
+             >
+               {confirmText}
+             </Button>
+           </Col>
+         </Row>
+       )
+       :
+       (
+         <Row type="flex" justify="center" gutter={16}>
+           <Col span={12}>
+             <Button
+               style={{width: "100%"}}
+               onClick={() => {
+                onCancel()
+                onConfirm()
+              }}
+             >
+               {cancelText}
+             </Button>
+           </Col>
 
-       {
-         modalType === "confirmOnly"?
-         (
-           <Row type="flex" justify="end">
-             <Col>
-               <Button
-                 style={{width: "100%"}}
-                 onClick={() => {
-                  onConfirm()
-                }}
-               >
-                 {confirmText}
-               </Button>
-             </Col>
-           </Row>
-         )
-         :
-         (
-           <Row type="flex" justify="center" gutter={16}>
-             <Col span={12}>
-               <Button
-                 style={{width: "100%"}}
-                 onClick={() => {
-                  onCancel()
-                  onConfirm()
-                }}
-               >
-                 {cancelText}
-               </Button>
-             </Col>
-
-             <Col span={12}>
-               <Button
-                 style={{width: "100%"}}
-                 type="danger"
-                 onClick={() =>
-                   {
-                    onConfirm()
-                    if(showInput) handleConfirm(inputRef.current.input.value);
-                    else handleConfirm();
+           <Col span={12}>
+             <Button
+               style={{width: "100%"}}
+               type="danger"
+               onClick={() =>
+                 {
+                   onConfirm()
+                   if(showInput) {
+                     handleConfirm(inputRef.current.input.value)
+                   }else{
+                     handleConfirm()
                    }
-                 }>
-                 {confirmText}
-               </Button>
-             </Col>
-           </Row>
-         )
-       }
-     </Modal>
+                 }
+               }>
+               {confirmText}
+             </Button>
+           </Col>
+         </Row>
+       )
+     }
+    </Modal>
   )
 }
 
